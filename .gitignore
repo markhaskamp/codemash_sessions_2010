@@ -1,0 +1,10 @@
+build/android/assets
+build/android/bin
+build/android/.classpath
+build/android/default.properties
+build/android/lib
+build/android/.project
+build/android/res
+build/android/sim
+build/android/src
+

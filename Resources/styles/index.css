@@ -1,0 +1,132 @@
+/* -------------------------------------------
+   Colors
+
+   #45b3da   blue            sessionTitle background
+   #0084a4   blue            background
+   #fed353   light orange    headings
+   #ff7f00   orange
+   #d06700   dark orange
+   #d1eb90   green
+   ------------------------------------------- */
+
+
+body
+{
+	background-color: #014861;
+	color: white;
+	font-family:sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #fed353;
+}
+
+.listHeading {
+  background-color: #d1eb90;
+  color: black;
+  font-weight: bold;
+  font-size: 0.90em;
+
+  padding: 3px;
+  padding-left: 10px;
+  margin-bottom: 0.50em;
+}
+
+.startTime {
+  color: #fed353;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  margin-top: 1.50em;
+}
+.SelectedSessionForStartTime {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1.0em;
+}
+.sessionItemContainer {
+  margin-left: 4px;
+  margin-right: 0.75em;
+}
+
+.sessionTitle {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-left: 1.25em;
+  padding: 1px;
+  padding-left: 4px;
+  cursor: auto;
+
+}
+
+.sessionTitleHover {
+  background-color: #45b3da;
+  color: black;
+
+  font-size: 1.2em;
+  font-style: italic;
+  margin-left: 1.25em;
+  padding: 1px;
+  padding-left: 4px;
+  cursor: pointer;
+}   
+
+.sessionTitleOld {
+  margin-bottom: 0.6em;
+}
+
+.sessionInfoContainer {
+  background-color:  #d1eb90;
+  font-size: 0.80em;
+  margin-left: 4.5em;
+  margin-right: 1.0em;
+  padding-bottom: 0.5em;
+}
+
+.selectImage {
+  float: left;
+   /* #0084a4   blue            background */
+  background-color: #005171;
+  padding: 4px;
+  margin: 1px;
+  border: 1px solid black;
+}
+
+.selectImageSelect {
+  float: left;
+   /* #0084a4   blue            background */
+  background-color: white
+  color: #005171;
+  padding: 4px;
+  margin: 1px;
+  border: 1px solid black;
+}
+
+.sessionInfoContainer .sessionSpeaker {
+    color: #d06700;
+    font-weight: bold;
+    margin-top: 1px;
+}
+.sessionInfoContainer .sessionRoom {
+    color: #d06700;
+}
+.sessionInfoContainer .sessionAbstract {
+    color: black;
+    margin-bottom: 5px;
+}
+.sessionInfoContainer .selectThisTitle {
+    color: #d06700;
+}
+
+#messages {
+  background-color: black;
+  color: silver;
+  font-size: 0.7em;
+
+  margin-top: 2.0em;
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+
+  padding: 0.5em;
+}
