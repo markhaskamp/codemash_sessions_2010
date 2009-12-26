@@ -15,7 +15,7 @@ function displaySessionStartTimes(h) {
     
     $.each(sortedTimes.sort(), function (ndx, startTime) {
 						var foo = startTime.split('T');
-            htmlStr += '<div><div class="startTime">' + foo[1] + ', ' + dayHash[foo[0]] + '</div>';
+            htmlStr += '<div><div class="startTime">' + foo[1] + ', ' + dayHash[foo[0]] + '<img class="startTimeExpansionArrow" src="img/arrowDown.gif" /></div>';
             htmlStr += '<div class="SelectedSessionForStartTime"></div>';
             htmlStr += '<div class="sessionTitlesList">';
 
@@ -87,8 +87,17 @@ $(function() {
 							$(this).removeClass("selectImage");
             });
 
-           $('.startTime').toggle( function() { $(this).next().next().slideDown("medium"); },
-                                   function() { $(this).next().next().slideUp("fast"); });
+           $('.startTime').toggle( 
+                                  function() { 
+                                      console.log($(this));
+                                      console.log($(this).siblings());
+                                      $(this).next().next().slideDown("medium"); 
+                                      $(this).children().attr('src', 'img/arrowUp.gif');
+                                  },
+                                  function() { 
+                                      $(this).next().next().slideUp("fast"); 
+                                      $(this).children().attr('src', 'img/arrowDown.gif');
+                                  });
 
       $('.sessionTitlesList').hide();
       $('.sessionInfoContainer').hide();
