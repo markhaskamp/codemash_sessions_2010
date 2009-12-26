@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
 <id>com.markhaskamp.codemashsessions2010</id>
 <name>codemashsessions2010</name>
-<version>0.5.1b</version>
+<version>0.5.2b</version>
 <icon>Geared.png</icon>
 	<persistent-wifi>false</persistent-wifi>
 	<prerendered-icon>false</prerendered-icon>
