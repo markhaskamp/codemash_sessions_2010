@@ -23,7 +23,7 @@ function displaySessionStartTimes(h) {
                     htmlStr += 
                         '<div class="sessionTitleOld">' +
                         '  <div class="selectImage" style="margin-right: 1.0em">0</div>' +
-                        '  <div class="sessionTitle">' + sessionJson.Title + ' (' + sessionJson.Room + ')</div>' +
+                        '  <div class="sessionTitle">' + sessionJson.Title + ' (' + sessionJson.Room + ')<img class="sessionTitleExpansionArrow" src="img/arrowDown.gif" /></div>' +
                         '</div>' +
                         '<div class="sessionInfoContainer">' +
                         '  <div class="sessionSpeaker">' + sessionJson.SpeakerName + '</div>' +
@@ -75,8 +75,15 @@ $(function() {
               $(this).removeClass("sessionTitleHover");
           });
 
-      $('.sessionTitle').toggle( function() { $(this).parent().next().slideDown("medium"); },
-                                 function() { $(this).parent().next().slideUp("fast"); });
+      $('.sessionTitle').toggle( 
+                                function() { 
+                                    $(this).parent().next().slideDown("medium"); 
+                                    $(this).children().attr('src', 'img/arrowUp.gif');
+                                },
+                                function() { 
+                                    $(this).parent().next().slideUp("fast"); 
+                                    $(this).children().attr('src', 'img/arrowDown.gif');
+                                });
 
       $('.selectImage').click( function(evt) {
               var currParent = $(this).parent();
