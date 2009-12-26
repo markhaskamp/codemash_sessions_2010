@@ -1,1 +1,4 @@
-Place your change log text here.  This file will be incorporated with your app at package time.
+
+v.next - more and better graphics to provide hints on how to expand/collapse containers
+v.next.2 - better graphics for selecting a session and for showing which session has been selected.
+v.next.3 - selected sessions saved to/pulled from local database
