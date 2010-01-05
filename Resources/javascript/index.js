@@ -17,9 +17,9 @@ function displaySessionStartTimes(h) {
 						var foo = startTime.split('T');
             htmlStr += '<div>';
             htmlStr += '  <div class="startTime">';
-            htmlStr += '    <span>' + foo[1] + ', ' + dayHash[foo[0]] + '</span>';
-                htmlStr += '    <span><img class="startTimeExpansionArrow" src="img/arrowDown.gif" /></span>';
-                htmlStr += '  </div>';
+            htmlStr +=      foo[1] + ', ' + dayHash[foo[0]];
+            htmlStr += '    <img class="startTimeExpansionArrow" src="img/arrowDown.gif" />';
+            htmlStr += '  </div>';
             htmlStr += '<div class="SelectedSessionForStartTime"></div>';
             htmlStr += '<div class="sessionTitlesList">';
 
