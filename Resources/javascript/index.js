@@ -93,9 +93,12 @@ $(function() {
               var currParent = $(this).parent();
               var selectedTitle = $(this).next().text();
 
+              // console.log(currParent.parent().prev().text());
+
               currParent.parent().prev().text(selectedTitle);
 							$(this).addClass("selectImageSelect");
 							$(this).removeClass("selectImage");
+
             });
 
            $('.startTime').toggle( 

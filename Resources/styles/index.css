@@ -96,8 +96,8 @@ h1, h2, h3, h4 {
 .selectImageSelect {
   float: left;
    /* #0084a4   blue            background */
-  background-color: white
-  color: #005171;
+  background-color: #d1eb90;
+  color: #0084a4;
   padding: 4px;
   margin: 1px;
   border: 1px solid black;

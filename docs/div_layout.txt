@@ -1,0 +1,25 @@
+
+<div>
+  <div class='startTime'>start-time
+    <img class='startTimeExpansionArrow'>
+  </div>
+  <div class="SelectedSessionForStartTime"></div>
+  <div class="sessionTitlesList">
+
+  --- loop start ---
+
+  <div class="sessionTitleOld">
+    <div class="selectImage">
+    <div class="sessionTitle"> title <img class="sessionTitleExpansionArrow" /></div>
+  </div>
+  <div class="sessionInfoContainer">
+    <div class="sessionSpeaker"></div>
+    <div class="sessionRoom"></div>
+    <div class="sessionAbstract"></div>
+  </div>
+
+  --- loop end ---
+
+</div>
+
+
