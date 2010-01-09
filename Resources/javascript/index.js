@@ -14,10 +14,11 @@ function displaySessionStartTimes(h) {
 
     
     $.each(sortedTimes.sort(), function (ndx, startTime) {
-						var foo = startTime.split('T');
+						var startTimeData = startTime.split('T');
+            var startTimeIDString = startTimeData[1] + ', ' + dayHash[startTimeData[0]];
             htmlStr += '<div>';
             htmlStr += '  <div class="startTime">';
-            htmlStr +=      foo[1] + ', ' + dayHash[foo[0]];
+            htmlStr +=      startTimeData[1] + ', ' + dayHash[startTimeData[0]];
             htmlStr += '    <img class="startTimeExpansionArrow" src="img/arrowDown.gif" />';
             htmlStr += '  </div>';
             htmlStr += '<div class="SelectedSessionForStartTime"></div>';
@@ -93,12 +94,10 @@ $(function() {
               var currParent = $(this).parent();
               var selectedTitle = $(this).next().text();
 
-              // console.log(currParent.parent().prev().text());
-
               currParent.parent().prev().text(selectedTitle);
-							$(this).addClass("selectImageSelect");
-							$(this).removeClass("selectImage");
 
+              $(this).parent().parent().children('.sessionTitleOld').children('.selectImageSelect').removeClass("selectImageSelect");
+							$(this).addClass("selectImageSelect");
             });
 
            $('.startTime').toggle( 
