@@ -79,9 +79,14 @@ h1, h2, h3, h4 {
 .sessionInfoContainer {
   background-color:  #d1eb90;
   font-size: 0.80em;
-  margin-left: 4.5em;
+  margin-left: 2.5em;
   margin-right: 1.0em;
+
+  padding-left: 0.33em;
+  padding-top: 0.25em;
+  padding-right: 0.25em;
   padding-bottom: 0.5em;
+
 }
 
 .selectImage {
@@ -106,7 +111,6 @@ h1, h2, h3, h4 {
 .sessionInfoContainer .sessionSpeaker {
     color: #d06700;
     font-weight: bold;
-    margin-top: 1px;
 }
 .sessionInfoContainer .sessionRoom {
     color: #d06700;

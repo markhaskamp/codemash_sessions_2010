@@ -8,3 +8,4 @@ build/android/res
 build/android/sim
 build/android/src
 
+*.swp
