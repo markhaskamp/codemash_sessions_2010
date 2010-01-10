@@ -27,7 +27,7 @@ function displaySessionStartTimes(h) {
             $.each(h[startTime],  function(ndx, sessionJson) {
                     htmlStr += 
                         '<div class="sessionTitleOld">' +
-                        '  <div class="selectImage" style="margin-right: 1.0em">0</div>' +
+                        '  <div class="selectImage" style="margin-right: 1.0em"><img class="sessionImg" src="img/Geared_muted.png" height="32" /></div>' +
                         '  <div class="sessionTitle">' + sessionJson.Title + ' (' + sessionJson.Room + ')<img class="sessionTitleExpansionArrow" src="img/arrowDown.gif" /></div>' +
                         '</div>' +
                         '<div class="sessionInfoContainer">' +
@@ -91,13 +91,20 @@ $(function() {
                                 });
 
       $('.selectImage').click( function(evt) {
-              var currParent = $(this).parent();
-              var selectedTitle = $(this).next().text();
+				      var selectedDiv = this;
+//				      console.log('selectedDiv: [' + selectedDiv + ']');
+//				      console.log('sessionImg: [' + $(selectedDiv).children('.sessionImg') + ']');
+
+              var currParent = $(selectedDiv).parent();
+              var selectedTitle = $(selectedDiv).next().text();
 
               currParent.parent().prev().text(selectedTitle);
 
-              $(this).parent().parent().children('.sessionTitleOld').children('.selectImageSelect').removeClass("selectImageSelect");
-							$(this).addClass("selectImageSelect");
+							// mute all images for this time slot
+              $(selectedDiv).parent().parent().children('.sessionTitleOld').children('.selectImage').children('.sessionImg').attr('src', 'img/Geared_muted.png');
+
+							// highlight current image
+							$(selectedDiv).children('.sessionImg').attr('src', 'img/Geared.png');
             });
 
            $('.startTime').toggle( 
