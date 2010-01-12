@@ -5,6 +5,7 @@ function displaySessionStartTimes(h) {
 		dayHash = {};
     dayHash['2010-01-14'] = 'Thursday';
     dayHash['2010-01-15'] = 'Friday';
+    dayHash['0001-01-01'] = 'Thursday & Friday';
 
     // sort hash by start time
     sortedTimes = [];
@@ -15,6 +16,8 @@ function displaySessionStartTimes(h) {
     
     $.each(sortedTimes.sort(), function (ndx, startTime) {
 						var startTimeData = startTime.split('T');
+            console.log('startTimeData: [' + startTimeData + ']');
+
             var startTimeIDString = startTimeData[1] + ', ' + dayHash[startTimeData[0]];
             htmlStr += '<div>';
             htmlStr += '  <div class="startTime">';
